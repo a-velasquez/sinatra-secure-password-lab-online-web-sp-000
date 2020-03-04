@@ -42,7 +42,7 @@ class ApplicationController < Sinatra::Base
 
   post "/login" do
     ##your code here
-    user = User.find_by(:username => params[:username]
+    user = User.find_by(:username => params[:username])
 
     if user && user.authenicate(params[:password])
       session[:user_id] = user.id
